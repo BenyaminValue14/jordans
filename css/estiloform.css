@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2? family= Archivo:ital,wght@1,100 & display=swap');
+
+body{
+    background-image: url(../IMG/jordan-banner.webp);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+form{
+    width: 450px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.formulario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+h2{
+    color: #000;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+input, textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 15px;
+    border: none;
+}
+
+textarea{
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+
+#boton{
+    background-color: #000;
+    color: #fff;
+    padding: 15px;
+}
+
+#boton:hover{
+    cursor: pointer;
+    background: rgba(255, 0, 0, 0.4);
+    transition: 1.5s;
+}
+
+@media (max-width:480px) {
+    form{
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+}

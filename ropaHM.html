@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos/Ropa.pe</title>
+    <link rel="stylesheet" href="./css/estiloropaHM.css">
+    <link rel="shortcut icon" href="./img/CCXE7COSDRCAHEXADF4ESEVG6U.webp">
+    <style>
+        @import url('https://fonts.googleapis.com/css2? family= Archivo:ital,wght@1,100 & display=swap');
+
+*{
+    font-family: sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+background-color: #E1E9ED;
+}
+
+header{
+    background-color: #000;
+    height: 220px;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo{
+    text-transform: uppercase;
+    color: #fff;
+    border: dashed #fff 1px;
+    padding: 5px;
+    border-radius: 15px;
+    width: 140px;
+    text-align: center;
+    transition: 1.5s;
+}
+
+.logo:hover{
+    transform: rotate(1turn);
+    filter: opacity(0.5)
+}
+
+.menu a{
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 5px;
+    transition: 0.4s;
+}
+
+.mostrar_menu
+.esconder_menu{
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+.mostrar_menu{
+    order: 1;
+}
+
+.menu a:hover,
+.mostrar_menu:hover,
+.esconder_menu.hover{
+    color: #808080;
+}
+
+#check{
+    display: none;
+}
+
+/*Decoración de texto*/
+#producto_hm{
+    text-decoration: underline overline;
+}
+
+#niño_a{
+    text-decoration: underline overline;
+}
+
+/*Responsive*/
+@media(max-width: 768px){
+    /*Header*/
+    .mostrar_menu
+    .esconder_menu{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #000;
+        top: 0;
+        right: -100%;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+    .menu a{
+        display: block;
+        padding: 10px;
+    }
+    .esconder_menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        color: #fff;
+        font-size: 35px;
+    }
+    .mostrar_menu{
+        color: #fff;
+        font-size: 35px;
+    }
+
+    #check:checked ~ .menu{
+        right: 0;
+    }
+}
+
+.banner{
+    width: 100%;
+    height: 20%;
+}
+
+.bloque{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.seccion1{
+    margin: 10px;
+    border: dashed black 2px;
+    width: 300px;
+    height: 395px;
+}
+
+.img1{
+    width: 280px;
+    height: 280px;
+    margin: 10px;
+}
+
+.texto{
+    margin: 10px;
+    text-align: center;
+}
+
+.img{
+    border: dashed black 2px;
+    height: 300px;
+}
+
+.seccion2{
+    margin: 10px;
+    border: dashed black 2px;
+    width: 300px;
+    height: 395px;
+}
+
+.img2{
+    width: 280px;
+    height: 280px;
+    margin: 10px;
+}
+
+.seccion3{
+    margin: 10px;
+    border: dashed black 2px;
+    width: 300px;
+    height: 395px;
+}
+
+.img3{
+    width: 280px;
+    height: 280px;
+    margin: 10px;
+}
+
+footer{
+    background-color: #000;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footertexto{
+    color: #fff;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: dashed #fff 1px;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.footer_texto{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer_social{
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+}
+
+.facebook{
+    background-color: #fff;
+    width: 50px;
+    border-radius: 10px;
+    transition: 1.5s;
+}
+
+.facebook:hover{
+    filter: opacity(0.5);
+}
+
+.instagram{
+    background-color: #fff;
+    width: 50px;
+    border-radius: 10px;
+    transition: 1.5s;
+}
+
+.instagram:hover{
+    filter: opacity(0.5);
+}
+
+.twitter{
+    background-color: #fff;
+    width: 50px;
+    border-radius: 10px;
+    transition: 1.5s;
+}
+
+.twitter:hover{
+    filter: opacity(0.5);
+}
+
+/*Responsive tablet*/
+@media screen and (max-width:900px){
+    .seccion1,
+    .seccion2,
+    .seccion3{
+        width: 30%;
+        height: 430px;
+    }
+    .img1,
+    .img2,
+    .img3{
+        width: 90%;
+        height: 90%;
+    }
+}
+@media screen and (max-width:768px){
+    .footer_texto{
+        font-size: 12px;
+    }
+    .facebook{
+        width: 40px;
+    }
+    .instagram{
+        width: 40px;
+    }
+    .twitter{
+        width: 40px;
+    }
+}
+
+/*Responsive celular*/
+@media screen and (max-width:600px){
+    .bloque{
+        flex-direction: column;
+    }
+    .seccion1,
+    .seccion2,
+    .seccion3{
+        width: 70%;
+        height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width:320px){
+    .seccion1,
+    .seccion2,
+    .seccion3{
+        width: 80%;
+        height: 415px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/*Animaciones*/
+.img1:hover{
+    filter: grayscale(100%);
+    transition: 1.5s;
+}
+.img2:hover{
+    filter: grayscale(100%);
+    transition: 1.5s;
+}
+.img3:hover{
+    filter: grayscale(100%);
+    transition: 1.5s;
+}
+
+.img1:hover{
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.4);
+	transform: translateY(-3%);
+}
+
+.img1{
+    transition: all 400ms ease-out;
+}
+
+.img2:hover{
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.4);
+	transform: translateY(-3%);
+}
+
+.img2{
+    transition: all 400ms ease-out;
+}
+
+.img3:hover{
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.4);
+	transform: translateY(-3%);
+}
+
+.img3{
+    transition: all 400ms ease-out;
+}
+
+.texto:hover{
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.4);
+	transform: translateY(-3%);
+}
+
+.texto{
+    transition: all 400ms ease-out;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h2 class="logo">Empresa Jordan</h2>
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar_menu">
+            &#8801
+        </label>
+    <nav class="menu">
+        <ul>
+            <a href="index.html">Inicio</a>
+            <a id="producto_hm" href="#">Productos (H/M)</a>
+            <a href="ropaHM.html">Ropa</a>
+            <a href="calzadoHM.html">Calzado</a>
+            <a href="">Videos</a>
+            <a id="niño_a" href="#">Niño/a</a>
+            <a href="ropaNIÑO.html">Ropa</a></li>
+            <a href="">Calzado</a></li>
+            <a href="">Accesorios</a>
+            <a href="form.html">Contáctenos</a>
+        <label for="check" class="esconder_menu">
+            &#215
+        </label>
+    </nav>
+    </header>
+    <img class= "banner" src="img/Captura de pantalla 2022-06-06 200617.png" alt="">
+    <section class="bloque">
+    </div><div class="seccion1"><section class="img"><img class="img1" src="img/Polo jordan 1.webp" alt=""></section><section class="texto">Nike Sportswear
+        <br>
+        Camiseta - Hombre
+        <br>
+        29,99 €
+    </section></div>
+    <div class="seccion2"><section class="img"><img class="img2" src="img/Polo jordan 2.webp" alt=""></section><section class="texto">Nike Sportswear
+        <br>
+        Camiseta - Hombre
+        <br>
+        34,99 €
+    </section></div>
+    <div class="seccion3"><section class="img"><img class="img3" src="IMG/Sudadera 1.webp" alt=""></section><section class="texto">Nike Sportswear
+        <br>
+        Sudadera con capucha con cremallera completa - Hombre
+        <br>
+        69,99 €
+    </section></div>
+    </section>
+    <br>
+    <section class="bloque">
+    </div><div class="seccion1"><section class="img"><img class="img1" src="img/Casasa mujer 1.webp" alt=""></section><section class="texto">Nike Dri-FIT Swoosh Run
+        <br>
+        Capa intermedia de running - Mujer
+        <br>
+        39,99 €
+    </section></div>
+    <div class="seccion2"><section class="img"><img class="img2" src="img/Buzo jordan mujer 1.webp" alt=""></section><section class="texto">Nike Sportswear Essential Collection
+        <br>
+        Pantalón de tejido Fleece - Mujer
+        <br>
+        54,99 €
+    </section></div>
+    <div class="seccion3"><section class="img"><img class="img3" src="img/Polera mujer 1.webp" alt=""></section><section class="texto">Nike Sportswear Collection Essential
+        <br>
+        Sudadera de chándal oversize de tejido Fleece - Mujer
+        <br>
+        59,99 €
+    </section></div>
+    </section>
+    <br>
+    <section class="bloque">
+    </div><div class="seccion1"><section class="img"><img class="img1" src="img/Buzo jordan hombre 1.webp" alt=""></section><section class="texto">Nike Sportswear
+        <br>
+        Pantalón con bolsillos de tejido Fleece - Hombre
+        <br>
+        64,99 €
+    </section></div>
+    <div class="seccion2"><section class="img"><img class="img2" src="img/Camiseta de futbol 1.webp" alt=""></section><section class="texto">Primera equipación Stadium Chelsea FC 2021/22
+        <br>
+        Camiseta de fútbol - Hombre
+        <br>
+        89,99 €
+    </section></div>
+    <div class="seccion3"><section class="img"><img class="img3" src="img/Sudadera 2.webp" alt=""></section><section class="texto">Jordan 23 Engineered
+        <br>
+        Sudadera con capucha - Hombre
+        <br>
+        149,99 €
+    </section></div>
+    </section>
+    <footer>
+        <div class="footer_texto">
+            <p class="footertexto">&copy; Todos los derechos reservados 2022</p>
+        </div>
+        <div class="footer_social">
+            <a href="https://www.facebook.com/jumpman23"> <img class= "facebook" src="img/facebook.svg" alt=""></a>
+            <a href="https://www.instagram.com/jumpman23/?hl=es"> <img class= "instagram" src="img/instagram.svg" alt=""></a>
+            <a href="https://twitter.com/Jumpman23?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"> <img class= "twitter" src="img/twitter.svg" alt=""></a>
+        </div>
+    </footer>
+</body>
+</html>
